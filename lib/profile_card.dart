@@ -1,4 +1,5 @@
 import 'package:curriculum_vitae/platform_services.dart';
+import 'package:curriculum_vitae/profile_info.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -18,6 +19,7 @@ class ProfileCard extends StatelessWidget {
                 blurRadius: 5,
                 spreadRadius: 2)
           ]),
+      child: ProfileInfo(),
     );
   }
 }
