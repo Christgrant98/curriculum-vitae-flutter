@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Widget IconLabelButtons(String lebel, String path) => TextButton.icon(
     onPressed: () => print('pressed'),
@@ -7,11 +8,11 @@ Widget IconLabelButtons(String lebel, String path) => TextButton.icon(
       path,
       width: 20,
     ),
-    label: Text(lebel, style: const TextStyle(color: Colors.white)));
+    label: Text(lebel, style: GoogleFonts.quicksand(color: Colors.white)));
 
 Widget TextButtons(String label, Color color) => TextButton(
     child: Text(label,
-        style: TextStyle(
+        style: GoogleFonts.quicksand(
             color: color,
             fontSize: 14,
             fontWeight: FontWeight.w500,
@@ -37,7 +38,7 @@ Widget NormalButton(String label, Color txtcolor, String path, Color iconColor,
             if (path != '') Image.asset(path, color: iconColor, width: 15),
             if (path != '') const SizedBox(width: 5),
             Text(label,
-                style: TextStyle(
+                style: GoogleFonts.quicksand(
                     fontSize: 10, color: txtcolor, fontWeight: FontWeight.w700))
           ])),
     );

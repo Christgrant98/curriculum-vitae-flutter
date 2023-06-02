@@ -2,6 +2,7 @@ import 'package:curriculum_vitae/icon_label_button.dart';
 import 'package:curriculum_vitae/platform_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FooterPanel extends StatelessWidget {
   bool isMobile = true;
@@ -90,10 +91,10 @@ class FooterPanel extends StatelessWidget {
   Widget UsefulLinks() => Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'CONTACT LINKS',
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: GoogleFonts.quicksand(fontWeight: FontWeight.bold),
           ),
           TextButtons('About me', Colors.grey),
           TextButtons('Github', Colors.grey),
@@ -104,10 +105,10 @@ class FooterPanel extends StatelessWidget {
   Widget OtherResources() => Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'PERSONAL REFERENCES',
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: GoogleFonts.quicksand(fontWeight: FontWeight.bold),
           ),
           TextButtons('About me', Colors.grey),
           TextButtons('Github', Colors.grey),

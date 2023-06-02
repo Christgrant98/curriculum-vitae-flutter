@@ -2,6 +2,7 @@ import 'package:curriculum_vitae/icon_label_button.dart';
 import 'package:curriculum_vitae/platform_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfileInfo extends StatelessWidget {
   String data =
@@ -37,8 +38,9 @@ class ProfileInfo extends StatelessWidget {
           SizedBox(
             height: isMobile ? 20 : 50,
           ),
-          const Text(
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          Text(
+              style: GoogleFonts.quicksand(
+                  fontSize: 30, fontWeight: FontWeight.bold),
               'Christian Garcerant'),
           const SizedBox(height: 10),
           Row(
@@ -51,8 +53,8 @@ class ProfileInfo extends StatelessWidget {
                 color: Colors.grey[400],
               ),
               const SizedBox(width: 5),
-              const Text(
-                  style: TextStyle(color: Colors.grey),
+              Text(
+                  style: GoogleFonts.quicksand(color: Colors.grey),
                   'BARRANQUILLA, COLOMBIA '),
             ],
           ),
@@ -68,7 +70,7 @@ class ProfileInfo extends StatelessWidget {
               ),
               const SizedBox(width: 5),
               Text(
-                  style: TextStyle(
+                  style: GoogleFonts.quicksand(
                       fontWeight: FontWeight.bold, color: Colors.grey[400]),
                   'FullStack developer - Joyful Labs'),
             ],
@@ -85,7 +87,7 @@ class ProfileInfo extends StatelessWidget {
               ),
               const SizedBox(width: 5),
               Text(
-                  style: TextStyle(color: Colors.grey[400]),
+                  style: GoogleFonts.quicksand(color: Colors.grey[400]),
                   'Universidad Autonoma del Caribe'),
             ],
           ),
@@ -96,7 +98,7 @@ class ProfileInfo extends StatelessWidget {
           ),
           Text(
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.quicksand(
                   fontWeight: FontWeight.bold, color: Colors.grey[400]),
               data),
           const SizedBox(height: 10),
@@ -115,14 +117,14 @@ class ProfileInfo extends StatelessWidget {
           children: [
             Text(
               '$value',
-              style: TextStyle(
+              style: GoogleFonts.quicksand(
                   color: Colors.grey[900],
                   fontSize: 12,
                   fontWeight: FontWeight.bold),
             ),
             Text(
               label,
-              style: TextStyle(
+              style: GoogleFonts.quicksand(
                   color: Colors.grey[900],
                   fontSize: 12,
                   fontWeight: FontWeight.bold),

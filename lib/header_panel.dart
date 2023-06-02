@@ -1,5 +1,6 @@
 import 'package:curriculum_vitae/icon_label_button.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'platform_services.dart';
 
 class HeaderPanel extends StatelessWidget {
@@ -37,8 +38,8 @@ class HeaderPanel extends StatelessWidget {
   Widget leftSidePanel() => Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const Text('Curriculum Vitae',
-              style: TextStyle(
+          Text('Curriculum Vitae',
+              style: GoogleFonts.quicksand(
                   fontSize: 25,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
