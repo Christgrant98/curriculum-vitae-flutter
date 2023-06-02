@@ -1,3 +1,4 @@
+import 'package:curriculum_vitae/footer_panel.dart';
 import 'package:curriculum_vitae/header_panel.dart';
 import 'package:curriculum_vitae/profile_panel.dart';
 import 'package:curriculum_vitae/top_background.dart';
@@ -26,6 +27,7 @@ class Layout extends StatelessWidget {
                     children: [
                       HeaderPanel(),
                       ProfilePanel(),
+                      FooterPanel(),
                     ],
                   ),
                 ),
