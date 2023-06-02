@@ -11,7 +11,7 @@ class FooterPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     double maxWidth = MediaQuery.of(context).size.width;
     isMobile = PlatFormServices.isMobile(context) ? true : false;
-    isDesktop = PlatFormServices.isMobile(context) ? true : false;
+    isDesktop = PlatFormServices.isDesktop(context) ? true : false;
 
     return Container(
       margin: EdgeInsets.symmetric(
@@ -22,15 +22,25 @@ class FooterPanel extends StatelessWidget {
           color: Colors.white,
           borderRadius: isMobile
               ? const BorderRadius.only(
-                  topLeft: Radius.circular(10), topRight: Radius.circular(10))
-              : BorderRadius.circular(5),
+                  topLeft: Radius.circular(20), topRight: Radius.circular(20))
+              : BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
                 color: Colors.black.withOpacity(.1),
                 blurRadius: 5,
                 spreadRadius: 2)
           ]),
-      child: isDesktop ? Row() : Column(),
+      child: isDesktop
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [SocialNetwork(), WebInfo()],
+            )
+          : Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [SocialNetwork(), WebInfo()],
+            ),
     );
   }
 
@@ -64,30 +74,44 @@ class FooterPanel extends StatelessWidget {
           onPressed: () {},
         ),
       );
+
+  Widget WebInfo() => Container(
+        margin: const EdgeInsets.all(20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            UsefulLinks(),
+            isMobile ? const Spacer(flex: 1) : const SizedBox(width: 50),
+            OtherResources()
+          ],
+        ),
+      );
+
+  Widget UsefulLinks() => Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text(
+            'CONTACT LINKS',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          TextButtons('About me', Colors.grey),
+          TextButtons('Github', Colors.grey),
+          TextButtons('Linkedin', Colors.grey),
+        ],
+      );
+
+  Widget OtherResources() => Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text(
+            'Personal References',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          TextButtons('About me', Colors.grey),
+          TextButtons('Github', Colors.grey),
+          TextButtons('Linkedin', Colors.grey),
+        ],
+      );
 }
-
-Widget WebInfo() => Container(
-      margin: EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('CONTACT LINKS'),
-          TextButtons('About me', Colors.grey[900]!),
-          TextButtons('Github', Colors.grey[900]!),
-          TextButtons('Linkedin', Colors.grey[900]!),
-        ],
-      ),
-    );
-
-Widget UsefulLinks() => Container(
-      margin: EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text('CONTACT LINKS'),
-          TextButtons('About me', Colors.grey[900]!),
-          TextButtons('Github', Colors.grey[900]!),
-          TextButtons('Linkedin', Colors.grey[900]!),
-        ],
-      ),
-    );
