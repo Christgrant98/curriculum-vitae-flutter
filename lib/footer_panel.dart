@@ -57,7 +57,7 @@ class FooterPanel extends StatelessWidget {
                 if (!isDesktop) const Spacer(flex: 1),
                 FloatingIconsButtons('assets/github-mark.svg'),
                 FloatingIconsButtons('assets/linkedin.svg'),
-                FloatingIconsButtons('assets/github-mark.svg'),
+                FloatingIconsButtons('assets/color-whatsapp.svg'),
                 if (!isDesktop) const Spacer(flex: 1)
               ],
             )
@@ -105,7 +105,7 @@ class FooterPanel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text(
-            'Personal References',
+            'PERSONAL REFERENCES',
             textAlign: TextAlign.center,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),

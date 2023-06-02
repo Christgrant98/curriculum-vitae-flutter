@@ -26,7 +26,15 @@ class ProfilePanel extends StatelessWidget {
   }
 
   Widget ProfileImage() => const CircleAvatar(
-        backgroundImage: AssetImage('assets/profile.jpg'),
-        radius: 70,
+        radius: 81.5,
+        backgroundColor: Colors.white,
+        child: CircleAvatar(
+          radius: 73.5,
+          backgroundColor: Colors.amber,
+          child: CircleAvatar(
+            backgroundImage: AssetImage('assets/profile.jpg'),
+            radius: 70,
+          ),
+        ),
       );
 }

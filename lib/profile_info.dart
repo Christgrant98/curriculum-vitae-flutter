@@ -96,7 +96,8 @@ class ProfileInfo extends StatelessWidget {
           ),
           Text(
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey[400]),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.grey[400]),
               data),
           const SizedBox(height: 10),
           TextButtons('showMore', Colors.green)
