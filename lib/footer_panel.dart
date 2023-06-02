@@ -50,8 +50,10 @@ class FooterPanel extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text('Lets keep in touch!'),
-            const Text('Find me on any of these platform.'),
+            Text(style: GoogleFonts.quicksand(), 'Lets keep in touch!'),
+            Text(
+                style: GoogleFonts.quicksand(),
+                'Find me on any of these platform.'),
             const SizedBox(height: 10),
             Row(
               children: [

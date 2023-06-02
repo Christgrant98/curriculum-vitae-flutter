@@ -15,7 +15,7 @@ Widget TextButtons(String label, Color color) => TextButton(
         style: GoogleFonts.quicksand(
             color: color,
             fontSize: 14,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.bold,
             letterSpacing: .5)),
     onPressed: () {});
 
