@@ -15,6 +15,7 @@ class ProfilePanel extends StatelessWidget {
         children: [
           ProfileCard(),
           Expanded(
+            flex: 1,
             child: Container(
               alignment: Alignment.center,
               child: ProfileImage(),

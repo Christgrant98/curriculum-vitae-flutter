@@ -1,5 +1,6 @@
 import 'package:curriculum_vitae/icon_label_button.dart';
 import 'package:curriculum_vitae/platform_services.dart';
+import 'package:curriculum_vitae/presentation/widgets/utils/text_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,10 +39,10 @@ class ProfileInfo extends StatelessWidget {
           SizedBox(
             height: isMobile ? 20 : 50,
           ),
-          Text(
-              style: GoogleFonts.quicksand(
-                  fontSize: 30, fontWeight: FontWeight.bold),
-              'Christian Garcerant'),
+          TextView(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              text: 'Christian Garcerant'),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -53,9 +54,7 @@ class ProfileInfo extends StatelessWidget {
                 color: Colors.grey[400],
               ),
               const SizedBox(width: 5),
-              Text(
-                  style: GoogleFonts.quicksand(color: Colors.grey),
-                  'BARRANQUILLA, COLOMBIA '),
+              TextView(color: Colors.grey, text: 'BARRANQUILLA, COLOMBIA '),
             ],
           ),
           const SizedBox(height: 30),
@@ -69,10 +68,10 @@ class ProfileInfo extends StatelessWidget {
                 color: Colors.grey[400],
               ),
               const SizedBox(width: 5),
-              Text(
-                  style: GoogleFonts.quicksand(
-                      fontWeight: FontWeight.bold, color: Colors.grey[400]),
-                  'FullStack developer - Joyful Labs'),
+              TextView(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[400],
+                  text: 'FullStack developer - Joyful Labs'),
             ],
           ),
           const SizedBox(height: 10),
@@ -86,9 +85,9 @@ class ProfileInfo extends StatelessWidget {
                 color: Colors.grey[400],
               ),
               const SizedBox(width: 5),
-              Text(
-                  style: GoogleFonts.quicksand(color: Colors.grey[400]),
-                  'Universidad Autonoma del Caribe'),
+              TextView(
+                  color: Colors.grey[400],
+                  text: 'Universidad Autonoma del Caribe'),
             ],
           ),
           Divider(
@@ -96,11 +95,8 @@ class ProfileInfo extends StatelessWidget {
             thickness: 1,
             color: Colors.grey[300],
           ),
-          Text(
-              textAlign: TextAlign.center,
-              style: GoogleFonts.quicksand(
-                  fontWeight: FontWeight.bold, color: Colors.grey[400]),
-              data),
+          TextView(
+              textAlign: TextAlign.center, color: Colors.grey[400], text: data),
           const SizedBox(height: 10),
           TextButtons('showMore', Colors.green)
         ],
@@ -115,20 +111,17 @@ class ProfileInfo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              '$value',
-              style: GoogleFonts.quicksand(
-                  color: Colors.grey[900],
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold),
+            TextView(
+              text: '$value',
+              color: Colors.grey[900],
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              label,
-              style: GoogleFonts.quicksand(
-                  color: Colors.grey[900],
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold),
-            )
+            TextView(
+                text: label,
+                color: Colors.grey[900],
+                fontSize: 12,
+                fontWeight: FontWeight.bold),
           ],
         ),
       );

@@ -1,5 +1,6 @@
 import 'package:curriculum_vitae/icon_label_button.dart';
 import 'package:curriculum_vitae/platform_services.dart';
+import 'package:curriculum_vitae/presentation/widgets/utils/text_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -49,10 +50,8 @@ class FooterPanel extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(style: GoogleFonts.quicksand(), 'Lets keep in touch!'),
-            Text(
-                style: GoogleFonts.quicksand(),
-                'Find me on any of these platform.'),
+            const TextView(text: 'Lets keep in touch!'),
+            const TextView(text: 'Find me on any of these platform.'),
             const SizedBox(height: 10),
             Row(
               children: [
@@ -92,10 +91,10 @@ class FooterPanel extends StatelessWidget {
   Widget UsefulLinks() => Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            'CONTACT LINKS',
+          const TextView(
+            text: 'CONTACT LINKS',
             textAlign: TextAlign.center,
-            style: GoogleFonts.quicksand(fontWeight: FontWeight.bold),
+            fontWeight: FontWeight.bold,
           ),
           TextButtons('About me', Colors.grey),
           TextButtons('Github', Colors.grey),
@@ -106,10 +105,10 @@ class FooterPanel extends StatelessWidget {
   Widget OtherResources() => Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            'PERSONAL REFERENCES',
+          const TextView(
+            text: 'PERSONAL REFERENCES',
             textAlign: TextAlign.center,
-            style: GoogleFonts.quicksand(fontWeight: FontWeight.bold),
+            fontWeight: FontWeight.bold,
           ),
           TextButtons('About me', Colors.grey),
           TextButtons('Github', Colors.grey),
